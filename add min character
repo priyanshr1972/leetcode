@@ -1,0 +1,19 @@
+nt addMinChar(string str){    
+        //code here
+        int st=0;
+        int en=str.size()-1;
+        int ans=0;
+        while(st<=en){
+            if(str[st]==str[en]){
+                st++;
+                en--;
+            }else{
+                ans++;
+                st=0;
+                en=str.size()-1-ans;
+            }
+        }
+        return ans;
+        
+    }
+};
